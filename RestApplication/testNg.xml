@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestAll">
+
+	<test name="RestApplicatonTestCases">
+		<classes>
+			<class name="com.mitchell.api.tests.ServiceLevelTests" />
+		</classes>
+	</test>
+</suite>

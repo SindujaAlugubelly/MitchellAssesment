@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestAll" duration-ms="7938" started-at="2016-07-03T03:37:35Z" finished-at="2016-07-03T03:37:43Z">
+    <groups>
+    </groups>
+    <test name="RestApplicatonTestCases" duration-ms="7938" started-at="2016-07-03T03:37:35Z" finished-at="2016-07-03T03:37:43Z">
+      <class name="com.mitchell.api.tests.ServiceLevelTests">
+        <test-method status="PASS" signature="testGetCall()[pri:1, instance:com.mitchell.api.tests.ServiceLevelTests@4c70fda8]" name="testGetCall" duration-ms="5601" started-at="2016-07-02T22:37:35Z" finished-at="2016-07-02T22:37:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCall -->
+        <test-method status="PASS" signature="testGetCallByID()[pri:2, instance:com.mitchell.api.tests.ServiceLevelTests@4c70fda8]" name="testGetCallByID" duration-ms="912" started-at="2016-07-02T22:37:41Z" finished-at="2016-07-02T22:37:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCallByID -->
+        <test-method status="PASS" signature="testPostCall()[pri:3, instance:com.mitchell.api.tests.ServiceLevelTests@4c70fda8]" name="testPostCall" duration-ms="282" started-at="2016-07-02T22:37:42Z" finished-at="2016-07-02T22:37:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostCall -->
+        <test-method status="PASS" signature="testPutCall()[pri:4, instance:com.mitchell.api.tests.ServiceLevelTests@4c70fda8]" name="testPutCall" duration-ms="484" started-at="2016-07-02T22:37:42Z" finished-at="2016-07-02T22:37:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPutCall -->
+        <test-method status="PASS" signature="testDeleteCall()[pri:5, instance:com.mitchell.api.tests.ServiceLevelTests@4c70fda8]" name="testDeleteCall" duration-ms="602" started-at="2016-07-02T22:37:43Z" finished-at="2016-07-02T22:37:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteCall -->
+      </class> <!-- com.mitchell.api.tests.ServiceLevelTests -->
+    </test> <!-- RestApplicatonTestCases -->
+  </suite> <!-- TestAll -->
+</testng-results>
