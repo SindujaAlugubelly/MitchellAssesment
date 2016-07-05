@@ -13,8 +13,7 @@ import com.mitchell.restapi.restvehicle.vehicleapi.Vehicle;
  * Vehicledbaccess model
  */
 public class Vehicledbaccess {
-
-	VehicleDatabase db = new VehicleDatabase();
+	VehicleDatabase db = VehicleDatabase.getInstance();
 	ResultSet rs;
 	int res;
 	
@@ -60,7 +59,6 @@ public class Vehicledbaccess {
 
 	public String postVehicleAccess(Vehicle vehicle, Connection conn) {
 		// insert
-		System.out.println(vehicle.getVehicleId());
 		String sql = "insert into vehicle values (" + vehicle.getVehicleId() + "," + vehicle.getVehicleYear() + ",'"
 				+ vehicle.getVehicleMake() + "','" + vehicle.getVehicleModel() + "')";
 		res = db.postresultSet(sql, conn);

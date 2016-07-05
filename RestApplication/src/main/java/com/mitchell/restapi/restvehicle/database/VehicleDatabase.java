@@ -9,22 +9,37 @@ import java.sql.Statement;
 import com.mitchell.restapi.restvehicle.vehicleapi.Vehicle;
 
 /**
- * @author Sinduja Alugubelly 
- * VehiclaDatabase connects to the database and
- * handles result set.
+ * @author Sinduja Alugubelly VehiclaDatabase connects to the database and
+ *         handles result set.
  *
  */
 public class VehicleDatabase {
 
-	public static Connection dbConn;
-	public Statement myStmt;
-	public ResultSet dbRes;
+	static Connection dbConn;
+	Statement myStmt;
+    ResultSet dbRes;
+
+	private static VehicleDatabase instance;
+
+	private VehicleDatabase() {
+
+	}
+
+	public static VehicleDatabase getInstance() {
+		 if (instance==null)  
+         {  
+                  instance=new  VehicleDatabase();  
+         }  
+         return instance;  
+		
+	}
 
 	public static Connection DBConnection() {
 		try {
+			
 			Class.forName("com.mysql.jdbc.Driver");
 			dbConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vehicledb", "root", "1991");
-			System.out.println("succesfull");
+			System.out.println(" Conn succesfull");
 		} catch (SQLException e) {
 
 			e.printStackTrace();
@@ -38,8 +53,8 @@ public class VehicleDatabase {
 	public ResultSet getresultSet(String query, Connection Conn) {
 		String sql = query;
 		dbConn = Conn;
-
 		try {
+	
 			myStmt = dbConn.createStatement();
 			dbRes = myStmt.executeQuery(sql);
 		} catch (SQLException e) {
